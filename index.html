@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Maps</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+    <script src="https://use.fontawesome.com/81140c216b.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>MAPS</h1>
+    </header>
+    <article>
+      <form id="mapForm" onsubmit="displayMap()">
+        <label>Choose a Location:
+        <select id="locationSelect" onchange="updateLocation()">
+          <option value="1">Mount Baker</option>
+          <option value="2">Mount Rainier</option>
+          <option value="3">Pikes Place</option>
+          <option value="4">Puyallup Fair</option>
+          <option value="5" selected>Space Needle</option>
+          <option value="6">WA State Capitol</option>
+        </select>
+        </label>
+        <label>Latitude <input id="latitude" type="number" step="any"></label>
+        <label>Longitude <input id="longitude" type="number" step="any"></label>
+        <label>Zoom <input id="zoom" value="0"></label>
+        <input type="submit" value="Submit">
+      </form>
+      <div id="google-map"></div>
+    </article>
+    <footer>
+      <p>HTML5-300 B Assignment 4, Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 Andelin Enterprises Inc.</p>
+    </footer>
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxzY4OXpNBOHmZo2iFAiV7ZBJHM4ITCLo"></script>
+    <script src="js/maps.js"></script>
+  </body>
+</html>
