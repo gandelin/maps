@@ -27,5 +27,6 @@ article {
 }
 
 #mymap {
-  height: 100%;
+  height: 95%;
+  margin: 1rem 0;
 }

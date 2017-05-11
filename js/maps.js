@@ -6,19 +6,19 @@ var locations=
         name: "Mount Baker",
         latitude: 48.7767,
         longitude: -121.8144,
-        zoom: 16
+        zoom: 10
       },
       {
         name: "Mount Rainier",
         latitude: 46.8523,
         longitude: -121.7603,
-        zoom: 16
+        zoom: 10
       },
       {
         name: "Pikes Place Market",
         latitude: 47.6101,
         longitude: -122.3421,
-        zoom: 16
+        zoom: 15
       },
       {
         name: "Puyallup Fairgrounds",
@@ -33,10 +33,10 @@ var locations=
         zoom:  16
       },
       {
-        name: "Washington State Capitol Building",
+        name: "Washington State Capitol",
         latitude: 47.0429,
         longitude: -122.8995,
-        zoom: 16
+        zoom: 14
       }
     ];
 
@@ -73,6 +73,7 @@ function getZoom() {
  * Display google map of selected point of interest
  */
 function displayMap() {
+  event.preventDefault();
   var ctr = getCenter();
   var z = getZoom();
   googleMap = new google.maps.Map(document.getElementById('mymap'), {
