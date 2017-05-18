@@ -72,8 +72,8 @@ function getZoom() {
 /*
  * Display google map of selected point of interest
  */
-function displayMap() {
-  event.preventDefault();
+function displayMap(e) {
+  e.preventDefault();
   var ctr = getCenter();
   var z = getZoom();
   googleMap = new google.maps.Map(document.getElementById('mymap'), {
